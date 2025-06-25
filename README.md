@@ -1,4 +1,5 @@
-**verilog-projects**
+**Verilog Projects**
+*Verilog/SystemVerilog implementation*
 
 A collection of simulation-based Verilog projects developed to strengthen my understanding of digital design, register-transfer level (RTL) development, and testbench-driven verification. Each project includes a testbench, signal tracing, and waveform output.
 
