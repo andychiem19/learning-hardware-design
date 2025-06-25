@@ -4,6 +4,6 @@ A synchronous 4-bit up-counter with reset and enable inputs. This project is par
 
 - `counter.v`: Verilog module
 - `counter_tb.v`: Testbench
-- Generates `counter.vcd` for waveform inspection
+- `counter.jpg`: Waveform for verification
 
 Simulated using Icarus Verilog + EPWave.
