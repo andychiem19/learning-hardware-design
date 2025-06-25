@@ -1,11 +1,11 @@
-module first_counter_tb();
+module counter_tb();
   
  reg clock, reset, enable;
  wire [3:0] counter_out;
  
  initial begin
    
-   $dumpfile("first_counter.vcd");      // Name of the waveform file
+   $dumpfile("counter.vcd");      // Name of the waveform file
    $dumpvars(0, U_counter);      // Dump everything under this module
    
    $display ("time\t clk reset enable counter");
@@ -24,7 +24,7 @@ always begin
   #5 clock = ~clock;
 end
    
-   first_counter U_counter (
+   counter U_counter (
      clock,
      reset,
      enable,
