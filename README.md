@@ -20,14 +20,6 @@ A collection of simulation-based Verilog projects developed to strengthen my und
 
 ---
 
-**Testing Approach**
-
-- Each module is paired with a dedicated testbench
-- `$monitor`, `$dumpfile`, and `$dumpvars` used for signal tracing
-- Simulations produce `.vcd` files for waveform inspection
-
----
-
 **Future Work**
 
 - Port selected designs to physical FPGA hardware
