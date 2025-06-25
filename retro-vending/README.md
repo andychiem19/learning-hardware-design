@@ -29,6 +29,7 @@ This project demonstrates my ability to:
 - Cleanly separate sequential and combinational logic
 - Use testbenches to verify and debug simulated hardware
 - Apply modular design principles to ensure hardware is easy to understand and update in future iterations
+- Translate RTL designs into FPGA implementations
 
 
 
