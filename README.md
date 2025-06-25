@@ -14,7 +14,7 @@ A collection of simulation-based Verilog projects developed to strengthen my und
 
 **Tools Used**
 
-- Verilog (IEEE 1364-2005 standard)
+- Verilog
 - Icarus Verilog 12.0
 - GTKWave or EPWave for waveform visualization
 
