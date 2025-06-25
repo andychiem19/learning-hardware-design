@@ -7,13 +7,15 @@ module retro_vending (
   input select,
   output reg [0:0] dispense
 );
-  
+
+	
   wire [6:0] total;
-  
+	// Defines the states for the FSM
   parameter 	IDLE = 2'b00, 
-				COLLECTING = 2'b01,
-  				DISPENSING = 2'b10;
-  
+		COLLECTING = 2'b01,
+  		DISPENSING = 2'b10;
+
+	// Creates an instance of coin_accumulator in retro_vending
   coin_accumulator coin_inst (
     .clk(clk),
     .reset(reset),
@@ -26,6 +28,7 @@ module retro_vending (
 
   reg [1:0] state, next_state;
   
+	// State transition logic
   always @(posedge clk or posedge reset) begin
     if (reset)
       state <= IDLE;
@@ -51,6 +54,7 @@ module retro_vending (
     endcase
   end
   
+	// Sends dispense signal
   always @(posedge clk or posedge reset) begin
   	if (reset)
     	dispense <= 0;
