@@ -14,7 +14,7 @@ A modular Verilog/SystemVerilog based vending machine FSM intended for FPGA simu
 
 ---
 
-**⚙Project Features**
+**Project Features**
 
 - Finite State Machine with IDLE, COLLECTING, and DISPENSING states
 - Modular design; cleanly separated logic for vending, coin accumulation, and edge detection processes
