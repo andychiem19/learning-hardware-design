@@ -40,10 +40,10 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 
 #### **Simulation Instructions**
 
-1. Install GTKWave, Icarus Verilog 12.0, and VS Code
+1. Install VS Code and Icarus Verilog 12.0 w/GTKWave
 2. [Install the module files here](src)
 3. [Install a testbench](tb) or [make your own](#make-your-own)
-4. Run the following command in the Powershell terminal
+4. Run the following command in the Powershell terminal after setting Icarus Verilog 12.0 as your compiler
 
 ```powershell
 # List all module files and your desired testbench file names as shown (removing parentheses)
