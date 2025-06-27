@@ -8,6 +8,7 @@ module retro_vending_tb;
   reg coin_10;
   reg coin_25;
   reg select;
+  reg next_item;
 
   wire dispense;
 
@@ -18,7 +19,8 @@ module retro_vending_tb;
     .coin_10(coin_10),
     .coin_25(coin_25),
     .select(select),
-    .dispense(dispense)
+    .dispense(dispense),
+    .next_item(next_item)
   );
 
   always #5 clk = ~clk;
@@ -30,6 +32,7 @@ module retro_vending_tb;
 
     clk = 0;
     reset = 1;
+    next_item = 0;
     coin_5 = 0;
     coin_10 = 0;
     coin_25 = 0;
@@ -37,44 +40,24 @@ module retro_vending_tb;
 
     #100 reset = 0;
 
-    // Back-to-back pulses
-    #100 coin_10 = 1;
-    #10 coin_10 = 0;
-    #10 coin_10 = 1;
-    #10 coin_10 = 0;
+    // man approaches, decides he wants the third snack
+    #10 next_item = 1;
+    #10 next_item = 0;
 
-    #100 reset = 1;
-    #10 reset = 0;
+    #50 next_item = 1;
+    #10 next_item = 0;
 
-    // Overlapping coins
-    #100 coin_5 = 1;
-    #0   coin_10 = 1; // Both go high on same time
-    #10  coin_5 = 0;
-    #0   coin_10 = 0;
+    //should cost $1.00, so he inserts four quarters
+    #100 coin_25 = 1;
+    #15 coin_25 = 0;
+    #100 coin_25 = 1;
+    #15 coin_25 = 0;
+    #100 coin_25 = 1;
+    #15 coin_25 = 0;
+    #100 coin_25 = 1;
+    #15 coin_25 = 0;
 
-    #100 reset = 1;
-    #10 reset = 0;
-
-    // Simulating noise
-    #200 coin_25 = 1;
-    #2   coin_25 = 0;
-    #2   coin_25 = 1;
-    #2   coin_25 = 0;
-    #2   coin_25 = 1;
-    #10  coin_25 = 0;
-
-    #100 reset = 1;
-    #10 reset = 0;
-
-    // Selecting early
-    #100 coin_25 = 1; #10 coin_25 = 0;
-    #50 select = 1;   // select before second coin
-    #50 coin_25 = 1; #10 coin_25 = 0;
-    #50 select = 0;
-
-    #100 reset = 1;
-    #10 reset = 0;
-
+    // upon select, should dispense
     #100 select = 1;
     #100 select = 0;
 
