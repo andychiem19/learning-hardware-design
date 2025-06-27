@@ -10,15 +10,24 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 
 ---
 
+#### **Learning Objectives**
+
+- Modular RTL design and finite state machine implementation
+- Edge detection and debouncing techniques for hardware synthesis 
+- Simulation-based debugging in GTKWave
+- RTL-to-hardware mapping and FPGA realization
+
+---
+
 #### **Project Features**
 
-| Feature | Description |
-|--------|-------------|
-| Finite State Machine | Implements `IDLE`, `COLLECTING`, and `DISPENSING` states |
-| Item Selection | Scrolling selector with four unique item-price pairs |
-| Modular Design | Separated logic for vending, coin accumulation, and edge detection |
-| Debounced Inputs | Edge-detected coin/button inputs for hardware synthesis compatibility |
-| Simulated Coins | Accepts 5¢, 10¢, and 25¢ pulses via testbench |
+| Feature | Description | Timeline |
+|--------|-------------|--------|
+| Finite State Machine | With `IDLE`, `COLLECTING`, and `DISPENSING` states | 6/25/2025
+| Modular Design | Separate logic for vending, coin accumulation, and edge detection | 
+| Coin Accumulator | Accepts 5¢, 10¢, and 25¢ coins and maintains an accurate running total | 
+| Debounced Inputs | Edge-detected coin/button inputs for hardware synthesizability | 6/26/2025
+| Item Selection | Scrolling selector with four unique item-price pairs | 
 
 *Planned Features* 
 | Feature | Description |
@@ -26,18 +35,6 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 | Change Return | Implement logic for dispensing leftover change |
 | Pixel Display | Text-based video output using onboard SoC CPU + external monitor |
 | FPGA Deployment | Final implementation on Zynq board with a stylized UI |
-
-  
----
-
-#### **Learning Objectives**
-
-`RTL design and FSM implementation`
-`Modular Verilog code structure`
-`Edge detection and debounce techniques`\
-`Handling simultaneous asynchronous inputs`
-`Simulation-based debugging`
-`RTL-to-hardware mapping and FPGA realization`
 
 ---
 
