@@ -41,8 +41,9 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 
 **Simulation Instructions**
 
-- Install GTKWave, Icarus Verilog 12.0, and VS Code
-- [Install the module files here](src)
+1. Install GTKWave, Icarus Verilog 12.0, and VS Code
+2. [Install the module files here](src)
+3. [Install a testbench](tb) or [make your own](#make-your-own)
 - Run the following command in the Powershell terminal
 
 ```powershell
@@ -50,7 +51,9 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 iverilog -g2012 -o sim.out (other-filename-here.sv testbench-filename-here.sv); vvp sim.out; if (Test-Path "retro_vending.vcd") { Start-Process gtkwave "retro_vending.vcd" }
 ```
 
-**Making your own testbenches**
+**Making your own testbenches** <a>
+<a name="make-your-own"></a>
+### <!-- placeholder -->
 
 You may want to simulate your own scenarios, so an example testbench is attached here with some example code.
 
