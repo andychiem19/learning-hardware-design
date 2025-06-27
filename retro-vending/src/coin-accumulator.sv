@@ -11,25 +11,25 @@ module coin_accumulator ( // Logic for accumulation of currency
   reg pulse_25;
 
   // Ports of edge detectors
-  edge_detector_25 edge_25 (
+  edge_detector ed_25 (
     .clk(clk),
     .reset(reset),
-    .in_signal_25(coin_25),
-    .pulse_25(pulse_25)
+    .in_signal(coin_25),
+    .pulse(pulse_25)
   );
 
-  edge_detector_10 edge_10 (
+  edge_detector ed_10 (
     .clk(clk),
     .reset(reset),
-    .in_signal_10(coin_10),
-    .pulse_10(pulse_10)
+    .in_signal(coin_10),
+    .pulse(pulse_10)
   );
 
-  edge_detector_5 edge_5 (
+  edge_detector ed_5 (
     .clk(clk),
     .reset(reset),
-    .in_signal_5(coin_5),
-    .pulse_5(pulse_5)
+    .in_signal(coin_5),
+    .pulse(pulse_5)
   );
   
   always @(posedge clk or posedge reset) begin
