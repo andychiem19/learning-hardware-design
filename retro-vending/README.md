@@ -14,18 +14,18 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 
 | Feature | Description |
 |--------|-------------|
-| **Finite State Machine** | Implements `IDLE`, `COLLECTING`, and `DISPENSING` states |
-| **Item Selection** | Scrolling selector with four unique item-price pairs |
-| **Modular Design** | Separated logic for vending, coin accumulation, and edge detection |
-| **Debounced Inputs** | Edge-detected coin/button inputs for hardware synthesis compatibility |
-| **Simulated Coins** | Accepts 5¢, 10¢, and 25¢ pulses via testbench |
+| Finite State Machine | Implements `IDLE`, `COLLECTING`, and `DISPENSING` states |
+| Item Selection | Scrolling selector with four unique item-price pairs |
+| Modular Design | Separated logic for vending, coin accumulation, and edge detection |
+| Debounced Inputs | Edge-detected coin/button inputs for hardware synthesis compatibility |
+| Simulated Coins | Accepts 5¢, 10¢, and 25¢ pulses via testbench |
 
 *Planned Features* 
 | Feature | Description |
 |--------|-------------|
-| **Change Return** | Implement logic for dispensing leftover change |
-| **Pixel Display** | Text-based video output using onboard SoC CPU + external monitor |
-| **FPGA Deployment** | Final implementation on Zynq board with a stylized UI |
+| Change Return | Implement logic for dispensing leftover change |
+| Pixel Display | Text-based video output using onboard SoC CPU + external monitor |
+| FPGA Deployment | Final implementation on Zynq board with a stylized UI |
 
   
 ---
