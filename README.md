@@ -1,7 +1,4 @@
-**Learning Hardware Design**  
-*Verilog/SystemVerilog*
-
-Hands-on projects in Verilog, FPGA development, and embedded systems — documenting my journey through digital and hardware design.
+Documenting my journey through digital and hardware design.
 
 ---
 
