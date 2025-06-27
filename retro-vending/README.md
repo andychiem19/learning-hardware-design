@@ -42,7 +42,7 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 **Simulation Instructions**
 
 - Install GTKWave, Icarus Verilog 12.0, and VS Code
-- [Install the module files here](retro-vending/src)
+- [Install the module files here](src)
 - Run the following command in the Powershell terminal
 
 ```powershell
