@@ -1,6 +1,4 @@
-<h3 align="center">Retro Vending Machine</h3>
-<p align="center">by Andy Chiem</p>
-
+### Retro Vending Machine
 A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. Accepts multiple coin inputs, tracks total value, and triggers a dispense signal once sufficient funds are collected.
 
 **Tools Used**
@@ -14,28 +12,32 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 
 **Project Features**
 
-- Finite State Machine with IDLE, COLLECTING, and DISPENSING states
-- Scrolling item selection; four distinct items with unique prices
-- Modular design; cleanly separated logic for vending, coin accumulation, and edge detection processes
-- Debounced inputs for hardware synthesis (edge detection)
-- Simulated coin inputs (5¢, 10¢, 25¢)
+| Feature | Description |
+|--------|-------------|
+| **FSM** | Implements `IDLE`, `COLLECTING`, and `DISPENSING` states |
+| **Item Selection** | Scrolling selector with four unique item-price pairs |
+| **Modular Design** | Separated logic for vending, coin accumulation, and edge detection |
+| **Debounced Inputs** | Edge-detected coin/button inputs for hardware synthesis compatibility |
+| **Simulated Coins** | Accepts 5¢, 10¢, and 25¢ pulses via testbench |
 
-*Planned Features*
+*Planned Features* 
+| Feature | Description |
+|--------|-------------|
+| **Change Return** | Implement logic for dispensing leftover change |
+| **Pixel Display** | Text-based video output using onboard SoC CPU + external monitor |
+| **FPGA Deployment** | Final implementation on Zynq board with a stylized UI |
 
-- Change return logic
-- Pixel-based text video output using onboard SoC CPU and external monitor
-- Deployment on Zynq FPGA with stylized UI
   
 ---
 
 **Learning Objectives**
 
-- RTL design and FSM implementation
-- Modular Verilog code structure
-- Edge detection and debounce techniques
-- Handling simultaneous asynchronous inputs
-- Simulation-based debugging
-- RTL-to-hardware mapping and FPGA realization
+`RTL design and FSM implementation`
+`Modular Verilog code structure`
+`Edge detection and debounce techniques`\
+`Handling simultaneous asynchronous inputs`
+`Simulation-based debugging`
+`RTL-to-hardware mapping and FPGA realization`
 
 ---
 
@@ -44,7 +46,7 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 1. Install GTKWave, Icarus Verilog 12.0, and VS Code
 2. [Install the module files here](src)
 3. [Install a testbench](tb) or [make your own](#make-your-own)
-- Run the following command in the Powershell terminal
+4. Run the following command in the Powershell terminal
 
 ```powershell
 # List all module files and your desired testbench file names as shown (removing parentheses)
