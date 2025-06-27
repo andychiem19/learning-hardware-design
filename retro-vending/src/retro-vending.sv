@@ -4,15 +4,46 @@ module retro_vending ( // Main vending logic
   input coin_5,
   input coin_10,
   input coin_25,
+  input next_item,
   input select,
-  output reg [0:0] dispense
+  output reg dispense
 );
 
-  wire [6:0] total;
-  reg [1:0] state, next_state;
-
-	// Defines the states for the FSM
+  // Defines the states for the FSM
   parameter 	IDLE = 2'b00, COLLECTING = 2'b01, DISPENSING = 2'b10;
+
+  wire [7:0]  total;              // 8-bit register to store inserted total
+  wire        next_item_pulse;    // Debounced signal for next_item button
+  reg [1:0]   state, next_state;  // Makes 2-bit registers to store states
+  reg[1:0]    selected_item;      // Determines which item the user has selected for purchase
+  reg [7:0]   item_prices [0:3];  
+
+  // Debounces next_item
+  edge_detector ed_nxt (
+    .clk(clk),
+    .reset(reset),
+    .in_signal(next_item),
+    .pulse(next_item_pulse)
+  );
+  
+  // Stores 8-bit values for item prices
+  always @(posedge clk or posedge reset) begin
+    if (reset) begin
+      item_prices[0] <= 8'd25;
+      item_prices[1] <= 8'd50;
+      item_prices[2] <= 8'd100;
+      item_prices[3] <= 8'd200;
+    end
+  end
+
+  // Logic for next item button
+  always @(posedge clk or posedge reset) begin
+    if (reset) begin
+      selected_item <= 0;
+    end 
+    else if (next_item_pulse)
+      selected_item <= selected_item + 1;
+  end
 
 	// Creates an instance of coin_accumulator in retro_vending
   coin_accumulator coin_inst (
@@ -42,7 +73,7 @@ module retro_vending ( // Main vending logic
           next_state <= COLLECTING; 
       
       COLLECTING:
-        if (select && total >= 50) 
+        if (select && total >= item_prices[selected_item]) 
           next_state <= DISPENSING; 
       
       DISPENSING: 
