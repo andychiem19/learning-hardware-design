@@ -17,17 +17,16 @@ A modular Verilog/SystemVerilog based vending machine FSM intended for FPGA simu
 **Project Features**
 
 - Finite State Machine with IDLE, COLLECTING, and DISPENSING states
+- Scrolling item selection; four distinct items with unique prices
 - Modular design; cleanly separated logic for vending, coin accumulation, and edge detection processes
 - Debounced inputs for hardware synthesis (edge detection)
 - Simulated coin inputs (5¢, 10¢, 25¢)
-- Testbench with edge cases
 
 ---
 
 **Planned Features**
 
-- Multiple item selection with unique prices
-- Error states and change return logic
+- Change return logic
 - Pixel-based text video output using onboard SoC CPU and external monitor
 - Deployment on Zynq FPGA with stylized UI
 
