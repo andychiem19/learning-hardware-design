@@ -1,16 +1,16 @@
-**Retro Vending Machine**  
-*Verilog/SystemVerilog implementation*
+<h3 align="center">Retro Vending Machine</h3>
+<p align="center">by Andy Chiem</p>
 
-A modular Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. Accepts multiple coin inputs, tracks total value, and triggers a dispense signal once sufficient funds are collected.
+A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. Accepts multiple coin inputs, tracks total value, and triggers a dispense signal once sufficient funds are collected.
 
 ---
 
 **Tools Used**
 
-- Verilog/SystemVerilog
-- Icarus Verilog 12.0
-- GTKWave
-- Visual Studio Code
+`Visual Studio Code`
+`Verilog/SystemVerilog`
+`Icarus Verilog 12.0`
+`GTKWave`
 
 ---
 
@@ -22,13 +22,23 @@ A modular Verilog/SystemVerilog based vending machine FSM intended for FPGA simu
 - Debounced inputs for hardware synthesis (edge detection)
 - Simulated coin inputs (5¢, 10¢, 25¢)
 
----
-
-**Planned Features**
+*Planned Features*
 
 - Change return logic
 - Pixel-based text video output using onboard SoC CPU and external monitor
 - Deployment on Zynq FPGA with stylized UI
+  
+---
+
+**Simulation Instructions**
+
+- Install GTKWave, Icarus Verilog 12.0, and VS Code
+- [Install the files here](retro-vending/src)
+- Run the following command in the Powershell terminal
+
+```ruby
+iverilog -g2012 -o sim.out retro-vending-master.sv (testbench-filename-here.sv); vvp sim.out; if (Test-Path "retro_vending.vcd") { Start-Process gtkwave "retro_vending.vcd" }
+```
 
 ---
 
