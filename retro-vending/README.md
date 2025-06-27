@@ -10,7 +10,7 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 
 ---
 
-**Project Features**
+#### **Project Features**
 
 | Feature | Description |
 |--------|-------------|
@@ -30,7 +30,7 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
   
 ---
 
-**Learning Objectives**
+#### **Learning Objectives**
 
 `RTL design and FSM implementation`
 `Modular Verilog code structure`
@@ -41,7 +41,7 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 
 ---
 
-**Simulation Instructions**
+#### **Simulation Instructions**
 
 1. Install GTKWave, Icarus Verilog 12.0, and VS Code
 2. [Install the module files here](src)
@@ -55,7 +55,7 @@ iverilog -g2012 -o sim.out (other-filename-here.sv testbench-filename-here.sv); 
 <a>
 <a name="make-your-own"></a>
   
-**Making your own testbenches**
+#### **Making your own testbenches**
 
 You may want to simulate your own scenarios, so an example testbench is attached here with some example code.
 
