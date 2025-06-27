@@ -52,10 +52,10 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 # List all module files and your desired testbench file names as shown (removing parentheses)
 iverilog -g2012 -o sim.out (other-filename-here.sv testbench-filename-here.sv); vvp sim.out; if (Test-Path "retro_vending.vcd") { Start-Process gtkwave "retro_vending.vcd" }
 ```
-
-**Making your own testbenches** <a>
+<a>
 <a name="make-your-own"></a>
-### <!-- placeholder -->
+  
+**Making your own testbenches**
 
 You may want to simulate your own scenarios, so an example testbench is attached here with some example code.
 
