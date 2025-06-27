@@ -14,7 +14,7 @@ A Verilog/SystemVerilog based vending machine FSM intended for FPGA simulation. 
 
 | Feature | Description |
 |--------|-------------|
-| **FSM** | Implements `IDLE`, `COLLECTING`, and `DISPENSING` states |
+| **Finite State Machine** | Implements `IDLE`, `COLLECTING`, and `DISPENSING` states |
 | **Item Selection** | Scrolling selector with four unique item-price pairs |
 | **Modular Design** | Separated logic for vending, coin accumulation, and edge detection |
 | **Debounced Inputs** | Edge-detected coin/button inputs for hardware synthesis compatibility |
